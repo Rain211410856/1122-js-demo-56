@@ -1,4 +1,6 @@
+新專案第一次上傳要複製到Bash Bar裡面
 git config --global user.email "211410856@o365.tku.edu.com.tw"
 git config --global user.name "Rain211410856"
+
 上傳時間日期證明的code
-git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --after="2023-10-19"
+git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --after="2024-02-20"
