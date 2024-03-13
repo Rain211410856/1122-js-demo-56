@@ -50,8 +50,8 @@ footer {
   width: 70%;
   border-radius: 10px;
 }
-#board li :hover,
-#reset :hover {
+#board li:hover,
+#reset:hover {
     cursor: pointer;
     background-color: #000;
 }
