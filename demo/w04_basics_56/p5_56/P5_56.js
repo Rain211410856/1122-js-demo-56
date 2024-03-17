@@ -7,21 +7,22 @@ const section = document.querySelector('.section-center');
 
 const displayTours_56 = () => {
     // .map專門處理陣列，能把陣列如數讀進來
-    const toursInfo = tours_56.map((tour) => {
+    const toursInfo = tours_56
+    .map((tour) => {
+        // const {} = 變數名稱;=解構變數名稱內的資料
+        const {id, info, local_img, name, price } = tour;
         // ``符號可以夾  "字串" 可以貼進網頁內容
+        // 下方文案處可以載入同格式不同資料，也就是變數，語法為${}
         return `
         <article class="single-tour">
-        <img src="./tour_theme/img/paris.jpg" alt="Best of Paris in 7 Days Tour" />
+        <img src=${local_img} alt=${name} />
         <footer>
           <div class="tour-info">
-            <h4>Best of Paris in 7 Days Tour</h4>
-            <h4 class="tour-price">$1,995</h4>
+            <h4>${name}</h4>
+            <h4 class="tour-price">$${price}</h4>
           </div>
           <p>
-            Paris is synonymous with the finest things that culture can
-            offer — in art, fashion, food, literature, and ideas. On this
-            tour, your Paris-savvy Rick Steves guide will immerse you in the
-            very best of ...<button>read more</button>
+           ${info}
           </p>
           <button class="delete-btn">not interested</button>
         </footer>
