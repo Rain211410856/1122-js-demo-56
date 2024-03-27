@@ -26,5 +26,51 @@ function showdemo(week) {
     case 'w4-p6':
       p.innerHTML = `<iframe src="./demo/w04_basics_56/p6_56/P6_56.html" width="100%" height="100%" />`;
       break;
+    case 'w4-p6':
+      p.innerHTML = `<iframe src="./demo/w04_basics_56/p6_56/P6_56.html" width="100%" height="100%" />`;
+      break;
+    case 'w5':
+      p.innerHTML =
+        p.innerHTML = `<iframe src="./demo/w05_menu_56/" width="100%" height="100%" />`;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
+    case 5:
+      p.innerHTML = ``;
+      break;
   }
 }
