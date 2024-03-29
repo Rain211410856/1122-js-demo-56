@@ -5,11 +5,11 @@ const btnContainer = document.querySelector('.btn-container');
 //完成後除錯必備 console.log('xxx',xxx);
 console.log('menu', menu);
 
-
 const displayMenuItems = (menu) => {
-    let displayMenu = menu.map((item) => {
-        const {id, title, category, price, img, desc } = item;
-        return `
+  let displayMenu = menu
+    .map((item) => {
+      const { id, title, category, price, img, desc } = item;
+      return `
         <article class="menu-item">
           <img
             src="${img}"
@@ -26,16 +26,12 @@ const displayMenuItems = (menu) => {
               ${desc}
             </p>
           </div>
-        </article>
-        <div class="btn-container">
-        <button type="button" class="filter-btn" data-id="all">${title}</button
-      </div>
-        `;
+        </article>`;
     })
     // .join('')之後return這個陣列會變成字串
     .join('');
-    console.log('displayMenu', displayMenu);
-    sectionCenter.innerHTML = displayMenu;
+  // console.log('displayMenu', displayMenu);
+  sectionCenter.innerHTML = displayMenu;
 };
 
 // const categories = ['all', 'breakfast', 'lunch', 'dinner', 'shakes'];
@@ -51,12 +47,24 @@ console.log('menuCategories', menuCategories);
 const categories = ['all', ...menuCategories];
 console.log('categories', categories);
 
-const displayMenuButtons = () => {};
+const displayMenuButtons = () => {
+  let menuButtons = categories
+    .map((category) => {
+      return `
+    <button type="button" class="filter-btn" data-id=${category}>${category}</button
+        >
+    `;
+    })
+    // .join可以把陣列變成文字，可以把HTML裡面的一整串不同元素整合在一起
+    .join('');
+  console.log('menuButtons', menuButtons);
+  btnContainer.innerHTML = menuButtons;
+};
 
 // JS只有一個執行續，會一直往下讀不等人，所以需要callback function的動作，
 // 指在執行完通知我，也就是return那一行的作用
 
 window.addEventListener('DOMContentLoaded', () => {
-    displayMenuItems(menu);
-    displayMenuButtons();
+  displayMenuItems(menu);
+  displayMenuButtons();
 });
