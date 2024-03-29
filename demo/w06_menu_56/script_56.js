@@ -34,20 +34,22 @@ const displayMenuItems = (menu) => {
   sectionCenter.innerHTML = displayMenu;
 };
 
-// const categories = ['all', 'breakfast', 'lunch', 'dinner', 'shakes'];
+
+const displayMenuButtons = () => {
+
+  // const categories = ['all', 'breakfast', 'lunch', 'dinner', 'shakes'];
 // set 動態陣列寫法，可以直接加入別的陣列資料，不用寫一大串
 const menuCategories = new Set(
   menu.map((item) => {
     return item.category;
   })
 );
-console.log('menuCategories', menuCategories);
+// console.log('menuCategories', menuCategories);
 
 // 此處...menuCategories = ...某變數的所有資料
 const categories = ['all', ...menuCategories];
-console.log('categories', categories);
+// console.log('categories', categories);
 
-const displayMenuButtons = () => {
   let menuButtons = categories
     .map((category) => {
       return `
@@ -57,8 +59,23 @@ const displayMenuButtons = () => {
     })
     // .join可以把陣列變成文字，可以把HTML裡面的一整串不同元素整合在一起
     .join('');
-  console.log('menuButtons', menuButtons);
+  // console.log('menuButtons', menuButtons);
   btnContainer.innerHTML = menuButtons;
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  console.log('filterBtns', filterBtns);
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      console.log('data-id', e.currentTarget.dataset.id);
+      const category = e.currentTarget.dataset.id;
+      const filterMenu = menu.filter((item) => item.category === category);
+      if(category === 'all') {
+        displayMenuItems(menu);
+      } else {
+        displayMenuItems(filterMenu);
+      }
+    });
+  });
 };
 
 // JS只有一個執行續，會一直往下讀不等人，所以需要callback function的動作，
