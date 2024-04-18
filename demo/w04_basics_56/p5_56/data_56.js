@@ -39,4 +39,11 @@ export const tours_56 = [
     local_img: './tour_theme/img/poland.jpeg',
     price: 2595,
   },
+  {
+    id: 6,
+    name: 'Best of taiwan in 10 Days Tour',
+    info: "探索台灣",
+    local_img: './tour_theme/img/taiwan.jpg',
+    price: 2595,
+  },
 ];
