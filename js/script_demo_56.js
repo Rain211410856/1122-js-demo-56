@@ -33,14 +33,14 @@ function showdemo(week) {
       p.innerHTML =
         p.innerHTML = `<iframe src="./demo/w05_menu_56/" width="100%" height="100%" />`;
       break;
-    case 5:
-      p.innerHTML = ``;
+    case 'mid21-p1_56':
+      p.innerHTML = `<iframe src="./demo/exams/p1_56/p1_56.html" width="100%" height="100%" />`;
       break;
-    case 5:
-      p.innerHTML = ``;
+    case 'mid21-p2_56':
+      p.innerHTML = `<iframe src="./demo/exams/p2_56/p2_56.html" width="100%" height="100%" />`;
       break;
-    case 5:
-      p.innerHTML = ``;
+    case 'mid21-p3_56':
+      p.innerHTML = `<iframe src="./demo/exams/p3_56/p3_56.html" width="100%" height="100%" />`;
       break;
     case 5:
       p.innerHTML = ``;
